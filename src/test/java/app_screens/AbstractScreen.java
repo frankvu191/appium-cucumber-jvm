@@ -1,4 +1,4 @@
-package com.test.apidemo.app.screens;
+package app_screens;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
@@ -21,25 +21,28 @@ import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+
 @Component
 public abstract class AbstractScreen {
 
     @Value("${explicit.wait}")
     public int explicitWaitTime;
+
     @Value("${implicit.wait}")
     public int implicitWaitTime;
+
     @Value("${default.wait}")
     public int defaultWaitTime;
+
     public AppiumDriver<? extends MobileElement> driver;
+
     @Autowired
     private Environment env;
 
     public AbstractScreen(AppiumDriver<? extends MobileElement> driver) {
         // TODO Auto-generated constructor stub
         this.driver = driver;
-        PageFactory.initElements(new AppiumFieldDecorator(driver, implicitWaitTime,
-                TimeUnit.SECONDS), this);
-
+        PageFactory.initElements(new AppiumFieldDecorator(driver, implicitWaitTime, TimeUnit.SECONDS), this);
     }
 
     public boolean isElementPresent(By by) {

@@ -1,4 +1,4 @@
-package com.test.apidemo.app.screens;
+package app_screens;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -8,21 +8,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by priyankp.shah on 15/9/15.
- */
+
 @Component
 @Scope("cucumber-glue")
-public class SecureSurfaceScreen extends AbstractScreen {
-    @AndroidFindBy(accessibility = "Secure Dialog")
-    private WebElement secureDialogElement;
+public class HomeScreen extends AbstractScreen {
+
+    @AndroidFindBy(accessibility = "App")
+    private WebElement appMenuElement;
 
     @Autowired
-    public SecureSurfaceScreen(AppiumDriver<? extends MobileElement> driver) {
+    public HomeScreen(AppiumDriver<? extends MobileElement> driver) {
         super(driver);
     }
 
-    public void clickOnSecureDialogLable() {
-        secureDialogElement.click();
+    public void clickOnAppLable() {
+        appMenuElement.click();
     }
 }

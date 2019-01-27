@@ -1,4 +1,4 @@
-package com.test.apidemo.app.screens;
+package app_screens;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -9,9 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-/**
- * Created by priyankp.shah on 9/17/15.
- */
+
 @Component
 @Scope("cucumber-glue")
 public class IncomingMessageNotificationScreen extends AbstractScreen {

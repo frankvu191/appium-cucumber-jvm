@@ -5,13 +5,10 @@
        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
     <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:config_apidemo_test_app.properties"/>
+        <property name="location" value="classpath:appConfig.properties"/>
     </bean>
-
-
     <bean id="glueCodeScope" class="cucumber.runtime.java.spring.GlueCodeScope">
     </bean>
-
     <bean id="glueCodeScopeConfigurer" class="org.springframework.beans.factory.config.CustomScopeConfigurer">
         <property name="scopes">
             <map>
